@@ -9,6 +9,7 @@ class APIProvider {
     final response = await http.get(Constant.BASE_URL +
         category +
         '?api_key=${Constant.API_KEY}');
+        
     print(response.body);
     return Movie.json(json.decode(response.body));
   }
